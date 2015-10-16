@@ -63,7 +63,7 @@ class VacanciesController < ApplicationController
 	end
 
 	def vacancy_params
-		params.require(:vacancy).permit(:vacancy_company_name, :vacancy_title, :vacancy_description, :vacancy_instructions, :vacancy_url, :vacancy_salary, :vacancy_company_email, :vacancy_company_logo, :vacancy_company_url, :vacancy_status)
+		params.require(:vacancy).permit(:vacancy_company_name, :vacancy_title, :vacancy_description, :vacancy_instructions, :vacancy_url, :vacancy_salary, :vacancy_company_email, :vacancy_company_logo, :vacancy_company_url, :vacancy_status, :tag_list)
 	end
 
 end
