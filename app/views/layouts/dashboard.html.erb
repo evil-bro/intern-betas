@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta charset="UTF-8">
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+
+		<title><% if @page_title %><%= @page_title %><% else %> Intern <% end %> | Dashboard</title>
+
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+
+		<%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="main">
+			<%= render :partial => 'layouts/partials/dashboard/header' %>
+			<%= render :partial => 'layouts/partials/dashboard/sidemenu' %>
+
+			<section id="content_wrapper">
+				<%= yield %>
+			</section>
+		</div>
+
+		<%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+	</body>
+</html>

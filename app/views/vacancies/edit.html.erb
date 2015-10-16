@@ -1,0 +1,17 @@
+<header class="alt" id="topbar">
+	<div class="topbar-left">
+		<ol class="breadcrumb">
+			<li class="crumb-link">
+				<a href="<%= dashboard_vacancies_path %>">Dashboard</a>
+			</li>
+			<li class="crumb-link">
+				<a href="<%= dashboard_vacancies_path %>">Vacancies</a>
+			</li>
+			<li class="crumb-trail">Edit vacancy</li>
+		</ol>
+	</div>
+</header>
+
+<section id="content" class="table-layout">
+	<%= render :partial => 'vacancies/form' %>
+</section>

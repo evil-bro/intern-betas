@@ -1,0 +1,34 @@
+<aside id="sidebar_left" class="nano nano-light affix sidebar-default has-scrollbar">
+	<div class="sidebar-left-content nano-content" tabindex="0" style="margin-right: -17px;">
+		<header class="sidebar-header">
+			<div class="sidebar-widget author-widget">
+				<div class="media">
+					<a href="#" class="media-left">
+						<img class="img-responsive" src="/images/avatars/4.jpg">
+					</a>
+					<div class="media-body">
+						<div class="media-links">
+							<a href="#">Logout</a>
+						</div>
+						<div class="media-author">Main Admin</div>
+					</div>
+				</div>
+			</div>
+        </header>
+        <ul class="nav sidebar-menu">
+        	<li class="sidebar-label pt20">Menu</li>
+			<li <% if controller?('vacancies') || (controller?('dashboard') && action?('vacancies')) %>class="active"<% end %>>
+				<a href="">
+					<span class="fa fa-user"></span>
+					<span class="sidebar-title">Vacancies</span>
+				</a>
+			</li>
+			<li <% if controller?('companies') %>class="active"<% end %>>
+				<a href="pages_calendar.html">
+					<span class="fa fa-building"></span>
+					<span class="sidebar-title">Companies</span>
+				</a>
+			</li>
+        </ul>
+	</div>
+</aside>

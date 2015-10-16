@@ -1,0 +1,132 @@
+<div class="tray tray-center">
+	<% if @vacancy.errors.any? %>
+		<div class="alert alert-danger alert-dismissable">
+			<button data-dismiss="alert" class="close" type="button">
+				<i class="fa fa-times"></i>
+			</button>
+
+			<i class="fa fa-info"></i>
+			<%= pluralize(@vacancy.errors.count, "error") %> prohibited this vacancy from being saved:
+			<ul>
+				<% @vacancy.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="hr dotted"></div>
+	<% end %>
+
+	<div class="mw1000 center-block">
+		<div class="admin-form theme-primary">
+			<div class="panel heading-border panel-primary">
+				<div class="panel-body bg-light">
+					<%= form_for(@vacancy) do |f| %>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_company_name, :placeholder => 'Company name *', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_title, :placeholder => 'Vacancy title *', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section">
+									<label class="field">
+										<%= f.text_area :vacancy_description, :placeholder => 'Vacancy description *', :class => 'gui-textarea' %>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section">
+									<label class="field">
+										<%= f.text_area :vacancy_instructions, :placeholder => 'How to apply to this job *', :class => 'gui-textarea' %>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_url, :placeholder => 'URL to apply (optional)', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_salary, :placeholder => 'Annual salary (optional)', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_company_email, :placeholder => 'Company email to apply', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="section">
+									<label class="field prepend-icon append-button file">
+									<span class="button btn-primary">Choose File</span>
+									<%= f.file_field :vacancy_company_logo, :on_change => "document.getElementById('uploader1').value = this.value;", :class => 'gui-file' %>
+									<input type="text" placeholder="Company logo (*.jpg, *.png only)" id="uploader1" class="gui-input">
+									<label class="field-icon">
+										<i class="fa fa-upload"></i>
+									</label>
+									</label>
+                          		</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section">
+									<label class="field">
+										<%= f.text_field :vacancy_company_url, :placeholder => 'Company URL *', :class => 'gui-input' %>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section">
+									<label class="field">
+										<div class="option-group field">
+											<label class="option option-primary">
+												<%= f.check_box :vacancy_status %>
+												<span class="checkbox"></span>Vacancy disabled
+											</label>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section">
+									<label class="field">
+										<%= f.submit 'Save', :class => 'btn btn-lg btn-info' %>
+									</label>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

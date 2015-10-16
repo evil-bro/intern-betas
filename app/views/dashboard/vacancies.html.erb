@@ -1,0 +1,67 @@
+<header class="alt" id="topbar">
+	<div class="topbar-left">
+		<ol class="breadcrumb">
+			<li class="crumb-link">
+				<a href="<%= dashboard_vacancies_path %>">Dashboard</a>
+			</li>
+			<li class="crumb-trail">Vacancies</li>
+		</ol>
+	</div>
+	<div class="topbar-right">
+		<a class="btn btn-sm btn-info" href="<%= new_vacancy_path %>">New vacancy</a>
+	</div>
+</header>
+<section id="content" class="table-layout">
+	<div class="tray tray-center">
+		<% if notice %>
+			<div class="alert alert-success alert-dismissable">
+				<button data-dismiss="alert" class="close" type="button">
+					<i class="ace-icon fa fa-times"></i>
+				</button>
+
+				<i class="fa fa-info"></i>
+				<%= notice %>
+			</div>
+			<div class="space-10 notice-margin"></div>
+		<% end %>
+
+		<%= will_paginate @vacancies, renderer: BootstrapPagination::Rails, :class => 'custom-pagination' %>
+
+		<div class="panel" style="border: none;">
+			<div class="panel-heading">
+				<span class="panel-title">
+					<span class="fa fa-user"></span>Current vacancies
+				</span>
+			</div>
+			<div class="panel-body pn">
+				<table class="table table-hover table-responsive">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Vacancy</th>
+							<th>Company</th>
+							<th>Annual salary</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @vacancies.each do |vacancy| %>
+							<tr>
+								<td></td>
+								<td><%= vacancy.vacancy_title %></td>
+								<td><%= vacancy.vacancy_company_name %></td>
+								<td><%= vacancy.vacancy_salary %></td>
+								<td>
+									<a class="btn btn-sm btn-info" type="button" href="<%= edit_vacancy_path(vacancy) %>">
+										<i class="fa fa-pencil"></i>
+									</a>
+									<%= link_to raw('<i class="fa fa-trash"></i>'), vacancy_path(vacancy), :method => :delete, :class => 'btn btn-sm btn-danger', :data => { confirm: 'Are you sure you want to delete this vacancy?' } %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

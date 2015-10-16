@@ -1,0 +1,11 @@
+//= require 'jquery'
+//= require 'jquery_ujs'
+//= require 'dist/bootstrap-3.3.5.min'
+
+//= require 'dist/dashboard/moment.min'
+//= require 'dist/dashboard/fullcalendar.min'
+//= require 'dist/dashboard/utility'
+//= require 'dist/dashboard/demo/demo'
+//= require 'dist/dashboard/main'
+//= require 'dist/dashboard/demo/widgets'
+//= require 'dist/dashboard/setup'
