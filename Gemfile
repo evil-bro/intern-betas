@@ -9,6 +9,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 ###
 gem 'factory_girl_rails', '~> 4.0'
+gem 'aws-sdk'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 ###
