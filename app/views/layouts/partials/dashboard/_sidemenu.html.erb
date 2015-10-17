@@ -18,15 +18,15 @@
         <ul class="nav sidebar-menu">
         	<li class="sidebar-label pt20">Menu</li>
 			<li <% if controller?('vacancies') || (controller?('dashboard') && action?('vacancies')) %>class="active"<% end %>>
-				<a href="">
-					<span class="fa fa-user"></span>
-					<span class="sidebar-title">Vacancies</span>
-				</a>
-			</li>
-			<li <% if controller?('companies') %>class="active"<% end %>>
-				<a href="pages_calendar.html">
+				<a href="<%= dashboard_vacancies_path %>">
 					<span class="fa fa-building"></span>
 					<span class="sidebar-title">Companies</span>
+				</a>
+			</li>
+			<li <% if controller?('internusrs') %>class="active"<% end %>>
+				<a href="<%= dashboard_interns_path %>">
+					<span class="fa fa-user"></span>
+					<span class="sidebar-title">Interns</span>
 				</a>
 			</li>
         </ul>

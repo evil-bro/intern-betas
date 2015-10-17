@@ -4,6 +4,7 @@ class Vacancy < ActiveRecord::Base
 	validates :vacancy_description, :presence => true
 	validates :vacancy_instructions, :presence => true
 	validates :vacancy_company_url, :presence => true
+	validates :vacancytype_id, :presence => true
 
 	mount_uploader :vacancy_company_logo, CompanylogoUploader
 

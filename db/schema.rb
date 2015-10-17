@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016192901) do
+ActiveRecord::Schema.define(version: 20151017200016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "internusrs", force: :cascade do |t|
+    t.string   "intern_name"
+    t.text     "intern_about"
+    t.string   "intern_email"
+    t.string   "intern_phone"
+    t.string   "intern_salary"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "internusrs_tags", id: false, force: :cascade do |t|
+    t.integer "internusr_id"
+    t.integer "tag_id"
+  end
+
+  add_index "internusrs_tags", ["internusr_id", "tag_id"], name: "index_internusrs_tags_on_internusr_id_and_tag_id", using: :btree
+  add_index "internusrs_tags", ["internusr_id"], name: "index_internusrs_tags_on_internusr_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string   "tag_title"
@@ -43,6 +61,7 @@ ActiveRecord::Schema.define(version: 20151016192901) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.boolean  "vacancy_status"
+    t.integer  "vacancytype_id"
   end
 
 end

@@ -13,7 +13,5 @@ class CompanylogoUploader < CarrierWave::Uploader::Base
     	%w(jpg jpeg png)
 	end
 
-	version :thumbnail do
-		process :resize_to_fill => [150, 150]
-	end
+	process :resize_to_fill => [200, 200]
 end
