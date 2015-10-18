@@ -222,7 +222,7 @@ h6 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 14px;
-	padding: 13px 20px 13px 20px;
+	padding: 13px 20px;
 	border-radius: 4px;
 	border: none;	
 }
@@ -234,6 +234,7 @@ h6 {
 }
 .turq-btn {
 	background: #2da991;
+	text-transform: none;
 }
 .blue-btn {
 	background: #3ab0e2;
@@ -416,12 +417,14 @@ input:active,
 textarea:focus, 
 input:focus {
     outline: 1 !important;
-    outline-color: #2da991 !important;
-    -webkit-appearance:none;
-        border:none !important;
-  -webkit-box-shadow:none !important;
-          box-shadow:none !important;
-        }
+	outline-color: #2da991 !important;
+	-webkit-appearance:none;
+	/*
+	border:none !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none !important;
+	*/
+}
 
 /*---------------------------------------
  **   SECTION HEADERS                -----
@@ -582,7 +585,71 @@ input:focus {
 	color: rgba(255,255,255,0.7);
 	text-transform: uppercase;
 }
+.green-bg {
+	background-color: #2da991;
+	i {
+		color: #FFF;
+	}
+	h2, a {
+		color: #FFF;
+	}
+}
+.white-bg {
+	border-bottom: 2px solid #2da991;
+	h2, a {
+		color: #2da991;
+	}
+}
+/*---------------------------------------
+ **   SECTION:  TOP MAIN             -----
+-----------------------------------------*/
+.top-main {
+	padding: 100px 0;
+	background-image: image-url('backgrounds/bgimage.jpg');
+	background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center; 
+	.section-header {
+		color: #FFF;
+		padding-bottom: 0;
+	}
 
+}
+/*---------------------------------------
+ **   SECTION:  WHY             -----
+-----------------------------------------*/
+.why {
+	.container-fluid {
+		padding: 0;
+	}
+	.col-sm-6 {
+		height: 146px;
+		line-height: 146px;
+		h2 {
+			text-transform: none;
+			margin: 0;
+			display: inline-block;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+/*---------------------------------------
+ **   SECTION:  TOP EMAILS             -----
+-----------------------------------------*/
+.emails {
+	padding: 100px 0;
+	.contact-form {
+		input {
+			border-radius: 3px;
+			border: 1px solid #2da991;
+		}
+		input:hover {
+			border-color: #179179;
+		}
+	}
+}
 /*---------------------------------------
  **   SECTION:  OUR FOCUS             -----
 -----------------------------------------*/
@@ -1190,8 +1257,11 @@ width: -webkit-calc(100% / 4);
 		border-radius: 20px;
 		color: #9b9b9b;
 	}
+	a.btn-load-more:hover {
+		background: none;
+		border-color: #179179;
+	}
 }
-
 
 /*---------------------------------------
  **   SECTION:  Pacages               -----
