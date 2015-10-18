@@ -16,7 +16,7 @@ class VacanciesController < ApplicationController
 		elsif params[:type] == 'marketing'
 			@vacancies = Vacancy.where(:vacancytype_id => 6).order(:created_at => 'DESC').limit(10)
 		else
-			@vacancies = Vacancy.order(:created_at => 'DESC').limit(2)
+			@vacancies = Vacancy.order(:created_at => 'DESC').limit(10)
 		end
 
 		
@@ -40,7 +40,7 @@ class VacanciesController < ApplicationController
 		elsif params[:type] == 'marketing'
 			@vacancies = Vacancy.where(:vacancytype_id => 6).order(:created_at => 'DESC').limit(10)
 		else
-			@vacancies = Vacancy.order(:created_at => 'DESC').limit(2)
+			@vacancies = Vacancy.order(:created_at => 'DESC').limit(10)
 		end
 
 		render :layout => 'page'
