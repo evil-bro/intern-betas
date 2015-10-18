@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+	match 'interns/why'					=> 'internusrs#why',						:as => 'why_interns',								:via => [:get]
+	match 'companies/why'				=> 'companies#why',							:as => 'why_companies',								:via => [:get]
+
 	match 'browse'						=> 'vacancies#browse',						:as => 'vacancies_browse',						:via => [:get]
 	match 'browse/:type'				=> 'vacancies#browse',																		:via => [:get]
 

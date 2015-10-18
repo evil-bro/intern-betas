@@ -9,6 +9,12 @@ class InternusrsController < ApplicationController
 		render :layout => 'dashboard'
 	end
 
+	def why
+		@page_title = 'Intern Betas | Interns'
+
+		render :layout => 'page'
+	end
+
 	def new
 		@page_title = 'New internship'
 		@intern = Internusr.new

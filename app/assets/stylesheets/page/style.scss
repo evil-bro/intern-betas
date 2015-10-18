@@ -600,12 +600,14 @@ input:focus {
 		color: #2da991;
 	}
 }
+.top-main, .why-companies, .why-interns, .why {
+	padding: 100px 0;
+}
 /*---------------------------------------
  **   SECTION:  TOP MAIN             -----
 -----------------------------------------*/
 .top-main {
-	padding: 100px 0;
-	background-image: image-url('backgrounds/bgimage.jpg');
+	background-image: image-url('backgrounds/bgimage1.jpg');
 	background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
     background-position: center center; 
@@ -613,12 +615,39 @@ input:focus {
 		color: #FFF;
 		padding-bottom: 0;
 	}
-
+}
+.why-companies {
+	background-image: image-url('backgrounds/bgimage2.jpg');
+	background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center; 
+	.section-header {
+		color: #FFF;
+		padding-bottom: 0;
+		border: 2px solid #FFF;
+		h2 {
+			margin: 40px 0 30px 0;
+		}
+	}
+}
+.why-interns {
+	background-image: image-url('backgrounds/bgimage2.jpg');
+	background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center; 
+	.section-header {
+		color: #FFF;
+		padding-bottom: 0;
+		border: 2px solid #FFF;
+		h2 {
+			margin: 40px 0 30px 0;
+		}
+	}
 }
 /*---------------------------------------
- **   SECTION:  WHY             -----
+ **   SECTION:  WHY MAIN            -----
 -----------------------------------------*/
-.why {
+.why-main {
 	.container-fluid {
 		padding: 0;
 	}
@@ -633,6 +662,17 @@ input:focus {
 		a {
 			text-decoration: underline;
 		}
+	}
+}
+/*---------------------------------------
+ **   SECTION:  WHY MAIN            -----
+-----------------------------------------*/
+.why {
+	.row {
+		margin-bottom: 40px;
+	}
+	.row:last-child {
+		margin-bottom: 0;
 	}
 }
 /*---------------------------------------
