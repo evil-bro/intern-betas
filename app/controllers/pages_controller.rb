@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 
 		render :layout => 'page'
 	end
+
+	def team
+		@page_title = 'Intern Betas | Companies'
+
+		render :layout => 'page'
+	end
 end
