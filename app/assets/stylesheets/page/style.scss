@@ -386,10 +386,8 @@ h6 {
 /*---------------------------------------
  **   FORM                           -----
 -----------------------------------------*/
-
-.input-box {
+.input-box, .search-input-box {
 	border: 0;
-	width: 274px;
 	text-align: left;
 	text-transform: none;
 	padding: 9px;
@@ -397,7 +395,10 @@ h6 {
 	padding-left: 15px;
 	display: inline-block;
 	border-radius: 4px;
-	background: rgba(255,255,255, 0.95);
+	background: rgba(255,255,255, 0.95);	
+}
+.input-box {
+	width: 274px;
 }
 .textarea-box {
 	border: 0;
