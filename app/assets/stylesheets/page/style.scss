@@ -695,7 +695,8 @@ input:focus {
 -----------------------------------------*/
 .emails {
 	padding: 100px 0;
-	.contact-form {
+
+	.subscription {
 		input {
 			border-radius: 3px;
 			border: 1px solid #2da991;
@@ -704,7 +705,23 @@ input:focus {
 			border-color: #179179;
 		}
 	}
+	.subscription {
+		margin-top: 15px;
+	}
+	.custom-button {
+	    margin-top: 7px;
+	    margin-left: 0;
+	}
+
 }
+.input-group {
+	display: block;
+	input {
+		border-bottom-right-radius: 20px !important;
+		border-top-right-radius: 20px !important;
+	}
+}
+
 /*---------------------------------------
  **   SECTION:  OUR FOCUS             -----
 -----------------------------------------*/
@@ -1422,9 +1439,8 @@ width: -webkit-calc(100% / 4);
  **   SECTION:  NEWSLETTER            -----
 -----------------------------------------*/
 .newsletter {
-	padding-top: 62px;
+	padding: 100px 0;
 	padding-bottom: 62px;
-	background: rgba(0, 0, 0, 0.5);
 }
 .input-group {
 	display: block;
@@ -1436,50 +1452,6 @@ width: -webkit-calc(100% / 4);
 .search-box {
 	border-radius: 20px;
 }
-/*
-.nav-middle {
-    color: #fff;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    text-align: center;
-    .box {
-	    margin: 0 auto;
-	    max-width: 900px;
-	    position: relative;
-	}
-	.dropdown-link {
-		border-left: 2px solid #D9D9D9;
-		border-right: 2px solid #D9D9D9;
-		cursor: pointer;
-		a:hover {
-			background: none;
-		}
-	}
-}
-.nav-middle a.menu-item {
-    text-align: center;
-}
-.nav-middle a.menu-item {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #fff -moz-use-text-color;
-    border-image: none;
-    border: none;
-    text-transform: uppercase;
-    color: #9b9b9b;
-    display: inline-block;
-    font-size: 1em;
-    font-weight: 700;
-    height: 146px; 
-    line-height: 146px; 
-    padding: 0;
-    vertical-align: middle;
-}
-*/
 .newsletter h3 {
 	font-size: 28px;
 	text-transform: uppercase;
