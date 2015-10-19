@@ -104,7 +104,7 @@
 						<%= image_tag(vacancy.vacancy_company_logo, :class => 'img-responsive center-block') %>
 					</a>
 				</div>
-				<div class="col-sm-6 col-lg-7 space-bottom-20">
+				<div class="col-lg-7 space-bottom-20">
 					<div class="row">
 						<div class="col-sm-6">
 							<h2><%= vacancy.vacancy_company_name %></h2>
@@ -116,13 +116,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6 col-lg-2 share-vacancy">
+				<div class="col-lg-2 share-vacancy text-center">
+					<!--
 					<a class="btn btn-default btn-block">FACEBOOK</a>
 					<a class="btn btn-default btn-block">ADS</a>
 					<a class="btn btn-default btn-block">SEO</a>
+					-->
+					<span class="label label-default label-block">FACEBOOK</span>
+					<span class="label label-default label-block">ADS</span>
+					<span class="label label-default label-block">SEO</span>
 				</div>
-				<div class="col-sm-6 col-lg-2 apply-to-vacancy">
-					<a class="btn btn-link btn-lg">APPLY</a>
+				<div class="col-lg-2 apply-to-vacancy">
+					<a class="btn btn-default btn-xlg">APPLY</a>
 				</div>
 			</div>
 		<% end %>
