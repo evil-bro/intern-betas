@@ -2,4 +2,5 @@
 //= require 'jquery_ujs'
 //= require 'dist/bootstrap-3.3.5.min'
 //= require 'dist/headroom.min'
+//= require 'dist/retina.min'
 //= require 'page/setup'
