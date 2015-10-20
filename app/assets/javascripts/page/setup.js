@@ -1,5 +1,9 @@
 var myElement = document.querySelector("header");
-// construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement);
-// initialise
 headroom.init(); 
+
+$(document).ready(function() {
+	$('.learn-more').on('click', function() {
+		$(this).parent().parent().parent().find('.vacancy-learn-more').toggle();
+	});
+})

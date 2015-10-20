@@ -617,6 +617,9 @@ input:focus {
 		color: #2da991;
 	}
 }
+.space-top-10 {
+	margin-top: 10px;
+}
 .space-bottom-20 {
 	margin-bottom: 20px;
 }
@@ -1335,9 +1338,6 @@ width: -webkit-calc(100% / 4);
 		.btn-default:hover {
 			border-color: #179179;
 		}
-		.btn-xlg {
-			font-size: 22px;
-		}
 	}
 	.apply-to-vacancy {
 		a:hover {
@@ -1345,6 +1345,23 @@ width: -webkit-calc(100% / 4);
 			color: #179179;
 		}
 	}
+}
+.label-turq {
+	background-color: #2da991;
+	color: #FFF;
+}
+.btn-turq {
+	border-color: #2da991;
+	color: #2da991;
+	font-weight: 700;
+}
+.btn-turq:hover {
+	border-color: #179179;
+	color: #179179;
+	background: none;
+}
+.btn-xlg {
+	font-size: 22px;
 }
 .vacancy-item:last-child {
 	margin-bottom: 0;
