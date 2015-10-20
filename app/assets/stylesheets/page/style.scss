@@ -36,6 +36,12 @@ a, a:focus, a:active {
     transform: translateY(-100%);
 }
 
+.btn-full {
+	display: inline-block; 
+	height: 100%; 
+	width: 100%;
+}
+
 /* icons */
 .pixeden  {
     height: 63px;
