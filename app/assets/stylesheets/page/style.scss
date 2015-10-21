@@ -617,8 +617,23 @@ input:focus {
 		color: #2da991;
 	}
 }
+.modal-form-messages {
+	margin: 0;
+	.alert {
+		display: none;
+	}
+}
+.no-space-bottom {
+	margin-bottom: 0;
+}
+.no-space-top {
+	margin-top: 0;
+}
 .space-top-10 {
 	margin-top: 10px;
+}
+.space-bottom-10 {
+	margin-bottom: 10px;
 }
 .space-bottom-20 {
 	margin-bottom: 20px;
@@ -713,6 +728,16 @@ input:focus {
 /*---------------------------------------
  **   SECTION:  TOP EMAILS             -----
 -----------------------------------------*/
+.modal-form {
+	input, textarea {
+		border-radius: 3px;
+		border: 1px solid #2da991;
+		width: 100%;
+	}
+	input:hover, textarea:hover {
+		border-color: #179179;
+	}	
+}
 .emails {
 	padding: 100px 0;
 
@@ -1362,6 +1387,11 @@ width: -webkit-calc(100% / 4);
 }
 .btn-xlg {
 	font-size: 22px;
+}
+.btn-xlg:hover {
+	background: none;
+	border-color: #179179;
+	color: #179179;
 }
 .vacancy-item:last-child {
 	margin-bottom: 0;

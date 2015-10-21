@@ -23,6 +23,12 @@ class VacanciesController < ApplicationController
 		render :layout => 'page'
 	end
 
+	def getvacancy
+		@vacancy = Vacancy.find(params[:id])
+
+		render :json => @vacancy
+	end
+
 	def browse
 		@page_title = 'Intern Betas'
 		@types = ['', 'Acct/Finance', 'Dev', 'Design', 'Engineer', 'Life/Science', 'Marketing']
