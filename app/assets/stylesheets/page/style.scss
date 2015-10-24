@@ -988,6 +988,7 @@ width: -webkit-calc(100% / 4);
 		height: 146px !important; 
 		line-height: 146px; 
 		padding: 0;
+		border-radius: 0;
 	}
 	.dropdown {
 		border-left: 2px solid #D9D9D9;
@@ -1371,6 +1372,9 @@ width: -webkit-calc(100% / 4);
 		}
 	}
 }
+.vacancy-item:last-child {
+	border-bottom: none;
+}
 .label-turq {
 	background-color: #2da991;
 	color: #FFF;
@@ -1404,16 +1408,20 @@ width: -webkit-calc(100% / 4);
 	h1 {
 		text-transform: none;
 	}
+	padding-bottom: 0;
 }
 /*---------------------------------------
  **   SEPARATOR:  Two               -----
 -----------------------------------------*/
+.load-more-section {
+	margin-top: 20px;
+}
 .separator-two {
 	background: none;
 	padding: 30px 0 50px 0;
 	a.btn-load-more {
 		border-color: #2da991 !important;
-		border-radius: 20px;
+		border-radius: 23px;
 		color: #9b9b9b;
 	}
 	a.btn-load-more:hover {

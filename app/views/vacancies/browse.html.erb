@@ -48,8 +48,6 @@
 	</div>
 </section>
 
-<%= @url %>
-
 <section class="vacancies">
 	<div class="container">
 		<% @vacancies.each do |vacancy | %>
@@ -99,11 +97,12 @@
 		<% end %>
 	</div>
 </section>
-
-<section class="separator-two">
-	<div class="color-overlay">
-		<div class="container">
-			<a class="btn btn-default btn-lg btn-load-more">+ Load more</a>
+<% if @vacancies.count > 10 %>
+	<section class="separator-two load-more-section">
+		<div class="color-overlay">
+			<div class="container">
+				<a class="btn btn-default btn-lg btn-load-more">+ Load more</a>
+			</div>
 		</div>
-	</div>	
-</section>
+	</section>
+<% end %>

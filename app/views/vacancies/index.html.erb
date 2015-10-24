@@ -156,13 +156,15 @@
 	</div>
 </section>
 
-<section class="separator-two">
-	<div class="color-overlay">
-		<div class="container">
-			<a class="btn btn-default btn-lg btn-load-more">+ Load more</a>
-		</div>
-	</div>	
-</section>
+<% if @vacancies.count > 10 %>
+	<section class="separator-two load-more-section">
+		<div class="color-overlay">
+			<div class="container">
+				<a class="btn btn-default btn-lg btn-load-more">+ Load more</a>
+			</div>
+		</div>	
+	</section>
+<% end %>
 
 <div class="modal fade" id="apply-form" tabindex="-1" role="dialog" aria-labelledby="vacancyFormLabel">
 	<div class="modal-dialog" role="document">
