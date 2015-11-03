@@ -29,6 +29,12 @@
 					<span class="sidebar-title">Interns</span>
 				</a>
 			</li>
+			<li <% if controller?('subscribers') %>class="active"<% end %>>
+				<a href="<%= dashboard_subscribers_path %>">
+					<span class="fa fa-envelope"></span>
+					<span class="sidebar-title">Subscribers</span>
+				</a>
+			</li>
         </ul>
 	</div>
 </aside>

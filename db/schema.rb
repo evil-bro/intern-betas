@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021083249) do
+ActiveRecord::Schema.define(version: 20151103053324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 20151021083249) do
 
   add_index "internusrs_tags", ["internusr_id", "tag_id"], name: "index_internusrs_tags_on_internusr_id_and_tag_id", using: :btree
   add_index "internusrs_tags", ["internusr_id"], name: "index_internusrs_tags_on_internusr_id", using: :btree
+
+  create_table "subscribers", force: :cascade do |t|
+    t.string   "subscriber_name"
+    t.string   "subscriber_email"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "tags", force: :cascade do |t|
     t.string   "tag_title"

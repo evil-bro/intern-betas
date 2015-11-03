@@ -54,4 +54,32 @@ $(document).ready(function() {
 
 		return false;
 	});
+
+	$('#new_subscriber').submit(function() {
+		var valuesToSubmit = $(this).serialize();
+		$.ajax({
+			type: 'POST',
+			url: $(this).attr('action'),
+			data: valuesToSubmit,
+			dataType: "JSON",
+			success: function(data, textStatus) {
+				$('#new_subscriber').find('input[type=text], textarea').val('');
+				
+				$('#subscriber-message').show();
+				$('#subscriber-message').delay(3000).slideUp('slow');
+				$('#subscriber-error').delay(3000).slideUp('slow');
+				
+			},
+			error:function(request, textStatus, errorThrown) {
+				$('#subscriber-error > p').append(request.responseText);
+				$('#subscriber-error').show();
+				$('#subscriber-error').delay(4000).slideUp('slow');
+				$('#subscriber-error').delay(4000).slideUp('slow');
+			}
+		});
+
+		$('.error-response').remove();
+
+		return false
+	});
 })

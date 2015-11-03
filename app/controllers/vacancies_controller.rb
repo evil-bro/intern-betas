@@ -2,6 +2,7 @@ class VacanciesController < ApplicationController
 	def index
 		@page_title = 'Intern Betas'
 		@types = ['', 'Acct/Finance', 'Dev', 'Design', 'Engineer', 'Life/Science', 'Marketing']
+		@subscriber = Subscriber.new
 		
 		if params[:type] == 'acct_finance'
 			@vacancies = Vacancy.where(:vacancytype_id => 1).order(:created_at => 'DESC').limit(10)

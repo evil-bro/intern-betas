@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 	match 'browse/:type'				=> 'vacancies#browse',																		:via => [:get]
 
 	match 'dashboard/interns'			=> 'internusrs#list',						:as => 'dashboard_interns',						:via => [:get]
+	match 'dashboard/subscribers'		=> 'subscribers#index',						:as => 'dashboard_subscribers',					:via => [:get]
+	resources :subscribers
   	resources :internusrs
 	resources :vacancies
 	resources :candidates

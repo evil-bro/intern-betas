@@ -42,12 +42,22 @@
 
 <section class="emails">
 	<div class="container">
+		<div class="row modal-form-messages">
+			<div id="subscriber-message" class="col-xs-12 alert alert-success">
+				<p class="text-center"><strong>Well done! </strong>Request has been sent</p>
+			</div>
+
+			<div id="subscriber-error" class="col-xs-12 alert alert-danger">
+				<p class="text-center"><strong>Error! </strong></p>
+			</div>
+		</div>
+
 		<h2 class="space-bottom-35">Get weekly emails on internship content</h2>
-		<form role="form" class="subscription" action="#">
-			<input type="text" class="form-control input-box" placeholder="Name">
-			<input type="text" class="form-control input-box" placeholder="Email">
-			<button class="btn btn-primary custom-button turq-btn">Subscribe</button>
-		</form>
+		<%= form_for(@subscriber, :remote => true, :html => {:class => 'subscription'}) do |f| %>
+			<%= f.text_field :subscriber_name, :placeholder => 'Name', :class => 'form-control input-box' %>
+			<%= f.text_field :subscriber_email, :placeholder => 'Email', :class => 'form-control input-box' %>
+			<%= f.submit 'Subscribe', :class => 'btn btn-primary custom-button turq-btn' %>
+		<% end %>
 	</div>
 </section>
 
