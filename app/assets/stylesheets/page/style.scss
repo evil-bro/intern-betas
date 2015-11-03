@@ -40,7 +40,21 @@ a, a:focus, a:active {
 	height: 100%; 
 	width: 100%;
 }
+ header.headroom {
+     position: fixed;
+     top: 100;
+     left: 0;
+     right: 0;
+     transition: all .2s ease-in-out;
+ }
 
+ header.headroom--unpinned {
+     top: -100px;
+ }
+
+ header.headroom--pinned {
+     top: 0;
+ }
 /* icons */
 .pixeden  {
     height: 63px;
@@ -648,7 +662,7 @@ input:focus {
 	margin-bottom: 35px;
 }
 .top-main, .why-companies, .why-interns, .why {
-	padding: 100px 0;
+	padding: 100px 0 100px 0;
 }
 /*---------------------------------------
  **   SECTION:  BLOG             -----
@@ -874,7 +888,7 @@ input:focus {
 
 .separator-one {
 	background: rgb(45, 169, 145);
-	padding: 50px 0 50px 0;
+	padding: 150px 0 50px 0;
 }
 .separator-one .green-btn {
 	background: #14a168;
