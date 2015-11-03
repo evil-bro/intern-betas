@@ -8,8 +8,14 @@ class PagesController < ApplicationController
 		render :layout => 'page'
 	end
 
+	def privacy
+		@page_title = 'Intern Betas | Privacy'
+
+		render :layout => 'page'
+	end
+
 	def team
-		@page_title = 'Intern Betas | Companies'
+		@page_title = 'Intern Betas | Team'
 
 		render :layout => 'page'
 	end
