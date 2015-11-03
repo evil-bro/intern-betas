@@ -14,6 +14,12 @@ class PagesController < ApplicationController
 		render :layout => 'page'
 	end
 
+	def service
+		@page_title = 'Intern Betas | Terms of Service'
+
+		render :layout => 'page'
+	end
+
 	def team
 		@page_title = 'Intern Betas | Team'
 
