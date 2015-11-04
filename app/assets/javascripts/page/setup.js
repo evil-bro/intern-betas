@@ -24,7 +24,7 @@ $(document).ready(function() {
 	});
 
 $("#header").headroom({
-	"offset": 305,
+	"offset": 345,
 	"tolerance": 5
 });
 
