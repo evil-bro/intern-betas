@@ -764,13 +764,15 @@ input:focus {
 .emails {
 	padding: 100px 0;
 
-	.subscription {
+	.ml-block-form {
 		input {
 			border-radius: 3px;
 			border: 1px solid #2DA28A;
 		}
 		input:hover {
 			border-color: #179179;
+		}
+		button {
 		}
 	}
 	.subscription {
@@ -780,6 +782,23 @@ input:focus {
 	    margin-top: 7px;
 	    margin-left: 0;
 	}
+
+	// .subscription {
+	// 	input {
+	// 		border-radius: 3px;
+	// 		border: 1px solid #2DA28A;
+	// 	}
+	// 	input:hover {
+	// 		border-color: #179179;
+	// 	}
+	// }
+	// .subscription {
+	// 	margin-top: 15px;
+	// }
+	// .custom-button {
+	//     margin-top: 7px;
+	//     margin-left: 0;
+	// }
 
 }
 .input-group {
