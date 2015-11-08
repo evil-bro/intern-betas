@@ -983,22 +983,22 @@ input:focus {
 	    margin-left: 0;
 	}
 
-	// .subscription {
-	// 	input {
-	// 		border-radius: 3px;
-	// 		border: 1px solid #2DA28A;
-	// 	}
-	// 	input:hover {
-	// 		border-color: #179179;
-	// 	}
-	// }
-	// .subscription {
-	// 	margin-top: 15px;
-	// }
-	// .custom-button {
-	//     margin-top: 7px;
-	//     margin-left: 0;
-	// }
+	.subscription {
+		input {
+			border-radius: 3px;
+			border: 1px solid #2DA28A;
+		}
+		input:hover {
+			border-color: #179179;
+		}
+	}
+	.subscription {
+		margin-top: 15px;
+	}
+	.custom-button {
+	    margin-top: 7px;
+	    margin-left: 0;
+	}
 
 }
 .input-group {
@@ -1107,7 +1107,7 @@ input:focus {
 
 .separator-one {
 	background: rgb(45, 169, 145);
-	padding: 150px 0 50px 0;
+	padding: 50px 0 50px 0;
 }
 .separator-one .green-btn {
 	background: #14a168;
