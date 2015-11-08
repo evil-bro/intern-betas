@@ -3,7 +3,6 @@ $(document).ready(function() {
 		$(this).parent().parent().parent().find('.vacancy-learn-more').toggle();
 	});
 
-
 	$('.apply-btn').on('click', function() {
 		var vacancyId = $(this).attr('vacancy-id');
 
@@ -26,7 +25,8 @@ $(document).ready(function() {
 	$('style').detach();
 
 	if ($('.subscribe-form').length) {
-		$('.subscribe-form > button:contains("Subscribe")').removeClass('primary').addClass('btn btn-primary custom-button turq-btn');		
+		$('.subscribe-form > button:contains("Subscribe")').removeClass('primary').addClass('btn btn-primary custom-button turq-btn');
+		$('.subscribe-form').addClass('form-inline');
 	}
 	
 

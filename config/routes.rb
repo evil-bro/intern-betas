@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   	match 'blog'						=> 'blog#index',							:as => 'blog',									:via => [:get]
   	match 'privacy'						=> 'pages#privacy',							:as => 'privacy',								:via => [:get]
   	match 'service'						=> 'pages#service',							:as => 'service',								:via => [:get]
+	match 'pricing'						=> 'pages#pricing',							:as => 'pricing',								:via => [:get]
 
 	match 'team'						=> 'pages#team',							:as => 'team',									:via => [:get]
+
 	match 'interns/why'					=> 'internusrs#why',						:as => 'why_interns',							:via => [:get]
 	match 'companies/why'				=> 'companies#why',							:as => 'why_companies',							:via => [:get]
 	match 'vacancies/getvacancy'		=> 'vacancies#getvacancy',																	:via => [:get]
