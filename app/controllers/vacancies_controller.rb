@@ -30,6 +30,15 @@ class VacanciesController < ApplicationController
 		render :json => @vacancy
 	end
 
+	def filter
+		@page_title = 'Intern Betas'
+		@types = ['', 'Acct/Finance', 'Dev', 'Design', 'Engineer', 'Life/Science', 'Marketing']
+		@filter = params[:id]
+		@items = Tag.where('tag_title ILIKE ?', '%' + params[:id] + '%')
+
+		render :layout => 'page'
+	end
+
 	def browse
 		@page_title = 'Intern Betas'
 		@types = ['', 'Acct/Finance', 'Dev', 'Design', 'Engineer', 'Life/Science', 'Marketing']
