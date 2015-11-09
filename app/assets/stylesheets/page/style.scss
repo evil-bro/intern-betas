@@ -1586,14 +1586,19 @@ width: -webkit-calc(100% / 4);
 
 		}
 		.label-default {
-			border: 1px solid #2DA28A;
-			color: #2DA28A;	
-			background: none;
-			margin-bottom: 10px;
+			background-color: #5CB85C;
+			color: #FFF;
 		}
-		.label-default:hover {
-			cursor: pointer;
-		}
+
+		// .label-default {
+		// 	border: 1px solid #2DA28A;
+		// 	color: #2DA28A;	
+		// 	background: none;
+		// 	margin-bottom: 10px;
+		// }
+		// .label-default:hover {
+		// 	cursor: pointer;
+		// }
 	}
 	.apply-to-vacancy {
 		a {
