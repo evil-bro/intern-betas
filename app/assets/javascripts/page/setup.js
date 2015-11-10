@@ -1,6 +1,13 @@
 $(document).ready(function() {
 	$('.learn-more').on('click', function() {
+		var button = $(this);
 		$(this).parent().parent().parent().find('.vacancy-learn-more').toggle();
+
+		if ($('.vacancy-learn-more').is(':visible')) {
+			button.text('Hide');
+		} else {
+			button.text('Learn more');
+		}
 	});
 
 	$('.apply-btn').on('click', function() {
