@@ -1,6 +1,36 @@
 <header id="home" class="header" style="z-index: 1;">
 	<div role="banner" class="navbar navbar-inverse bs-docs-nav fixed" id="header">
 		<div class="container">
+			<div class="navbar" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button data-target="#bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="<%= root_url %>"><img alt="Intern Betas" src="/images/logo-green.png"></a>
+						</div>
+					</div>
+					<div class="navbar-collapse collapse" id="nav-secondary">
+						<ul class="nav nav-justified">
+							<li class="text-center"><a style="font-size: 20px; font-weight: bold; color: #2DA28A !important;" href="<%= vacancies_browse_path %>">Browse</a></li>
+							<li class="text-center"><a style="font-size: 20px; font-weight: bold; color: #2DA28A !important;" href="<%= why_interns_path %>">Interns</a></li>
+							<li class="text-center"><a style="font-size: 20px; font-weight: bold; color: #2DA28A !important;" href="<%= why_companies_path %>">Companies</a></li>
+							<li class="text-center"><a style="font-size: 20px; font-weight: bold; color: #2DA28A !important;" href="https://medium.com/@internbetas" target="_blank">Blog</a></li>
+							<li class="button-holder text-center">
+								<p class="navbar-btn">
+									<a href="https://internbetas.typeform.com/to/l4S83y" target="_blank" class="btn btn-primary custom-header-button turq-btn">Post Internships</a>
+								</p>
+							</li>
+
+						</ul>
+					</div><!--/.navbar-collapse -->
+				</div>
+			</div>
+<!-- 		
 			<div class="navbar-header responsive-logo">
 				<button data-target="#bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
 					<span class="sr-only">Toggle navigation</span>
@@ -12,19 +42,19 @@
 					<a href="<%= root_url %>"><img alt="Intern Betas" src="/images/logo-green.png"></a>
 				</div>
 			</div>
-			<nav id="bs-navbar-collapse" role="navigation" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
-				<li class="text-center"><a href="<%= vacancies_browse_path %>">Browse</a></li>
-				<li class="text-center"><a href="<%= why_interns_path %>">Interns</a></li>
-				<li class="text-center"><a href="<%= why_companies_path %>">Companies</a></li>
-				<li class="text-center"><a href="https://medium.com/@internbetas" target="_blank">Blog</a></li>
-				<li class="button-holder text-center">
-					<p class="navbar-btn" style="margin-bottom: 20px;">
-						<a href="https://internbetas.typeform.com/to/l4S83y" target="_blank" class="btn btn-primary custom-header-button turq-btn">Post Internships</a>
-					</p>
-				</li>
-			</ul>
+			<nav id="bs-navbar-collapse" role="navigation" class="navbar-collapse collapse" style="float: left;">
+				<ul class="nav navbar-nav main-nav-list">
+					<li class="text-center"><a href="<%= vacancies_browse_path %>">Browse</a></li>
+					<li class="text-center"><a href="<%= why_interns_path %>">Interns</a></li>
+					<li class="text-center"><a href="<%= why_companies_path %>">Companies</a></li>
+					<li class="text-center"><a href="https://medium.com/@internbetas" target="_blank">Blog</a></li>
+					<li class="button-holder text-center">
+						<p class="navbar-btn" style="margin-bottom: 20px;">
+							<a href="https://internbetas.typeform.com/to/l4S83y" target="_blank" class="btn btn-primary custom-header-button turq-btn">Post Internships</a>
+						</p>
+					</li>
+				</ul>
 			</nav>
-		</div>
+ -->	</div>
 	</div>
 </header>
