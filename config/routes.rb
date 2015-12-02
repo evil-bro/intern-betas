@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	devise_for :users
+	
   	match 'blog'						=> 'blog#index',							:as => 'blog',									:via => [:get]
   	match 'privacy'						=> 'pages#privacy',							:as => 'privacy',								:via => [:get]
   	match 'service'						=> 'pages#service',							:as => 'service',								:via => [:get]

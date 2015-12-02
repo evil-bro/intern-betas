@@ -61,11 +61,21 @@
 		<div class="row top-border-2 space-top-30">
 			<div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 space-top-40">
 				<div class="row bottom-links">
-					<div class="col-xs-6 text-right">
+					<div class="col-xs-4 text-right">
 						<a href="<%= privacy_path %>">Privacy Policy</a>
 					</div>
-					<div class="col-xs-6 text-left">
+					<div class="col-xs-4 text-center">
 						<a href="<%= service_path %>">Terms of Service</a>
+					</div>
+					<div class="col-xs-4 text-left">
+						<% if user_signed_in? %>
+							<% if current_user.admin? %>
+								<%= link_to('Dashboard', dashboard_vacancies_path) %>
+							<% end %>
+							<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+						<% else %>
+							<%= link_to('Login', new_user_session_path)  %>
+						<% end %>
 					</div>
 				</div>
 			</div>
