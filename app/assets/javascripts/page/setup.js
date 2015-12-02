@@ -1,8 +1,14 @@
 $(document).ready(function() {
 	$('.learn-more').on('click', function() {
+		var button = $(this);
 		$(this).parent().parent().parent().find('.vacancy-learn-more').toggle();
-	});
 
+		if ($('.vacancy-learn-more').is(':visible')) {
+			button.text('Hide');
+		} else {
+			button.text('Learn more');
+		}
+	});
 
 	$('.apply-btn').on('click', function() {
 		var vacancyId = $(this).attr('vacancy-id');
@@ -23,10 +29,18 @@ $(document).ready(function() {
 		})
 	});
 
-$("#header").headroom({
-	"offset": 305,
-	"tolerance": 5
-});
+	$('style').detach();
+
+	if ($('.subscribe-form').length) {
+		$('.subscribe-form > button:contains("Subscribe")').removeClass('primary').addClass('btn btn-primary custom-button turq-btn');
+		$('.subscribe-form').addClass('form-inline');
+	}
+	
+
+	$("#header").headroom({
+		"offset": 305,
+		"tolerance": 5
+	});
 
 	$('#vacancy-form').submit(function() {
 		var valuesToSubmit = $(this).serialize();

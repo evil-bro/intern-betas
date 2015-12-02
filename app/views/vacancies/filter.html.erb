@@ -44,54 +44,57 @@
 
 <section class="vacancies">
 	<div class="container">
-		<% @vacancies.each do |vacancy | %>
-			<div class="row vacancy-item">
-				<div class="col-lg-1 text-center space-bottom-20">
-					<a>
-						<%= image_tag(vacancy.vacancy_company_logo, :class => 'img-responsive center-block') %>
-					</a>
-				</div>
-				<div class="col-lg-7 space-bottom-20">
-					<div class="row">
-						<div class="col-sm-6">
-							<h2><%= vacancy.vacancy_company_name %></h2>
-							<h4><a><%= @types[vacancy.vacancytype_id] %> </a></h4>
-							<h4><i class="fa fa-map-marker"></i> Remote</h4>
+		<% @items.each do |item| %>
+			<% item.vacancies.each do |vacancy| %>
+				<div class="row vacancy-item">
+					<div class="col-lg-1 text-center space-bottom-20">
+						<a>
+							<%= image_tag(vacancy.vacancy_company_logo, :class => 'img-responsive center-block') %>
+						</a>
+					</div>
+
+					<div class="col-lg-7 space-bottom-20">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2><%= vacancy.vacancy_company_name %></h2>
+								<h4><a><%= @types[vacancy.vacancytype_id] %> </a></h4>
+								<h4><i class="fa fa-map-marker"></i> Remote</h4>
+							</div>
+							<div class="col-sm-6 text-center vacancy-salary">
+								<h2>$<%= number_with_delimiter(vacancy.vacancy_salary) %></h2>
+							</div>
 						</div>
-						<div class="col-sm-6 text-center vacancy-salary">
-							<h2>$<%= number_with_delimiter(vacancy.vacancy_salary) %></h2>
+					</div>
+					<div class="col-lg-2 share-vacancy text-center">
+						<span class="label label-default">FACEBOOK</span>
+						<span class="label label-default">ADS</span>
+						<span class="label label-default">SEO</span>
+					</div>
+					<div class="col-lg-2 apply-to-vacancy">
+						<a class="btn btn-default btn-xlg apply-btn" data-toggle="modal" data-target="#apply-form" vacancy-id="<%= vacancy.id %>">APPLY</a>
+					</div>
+					<div class="row space-top-10">
+						<div class="col-xs-12 text-center">
+							<a class="btn btn-default btn-turq learn-more">Learn more</a>
+						</div>
+					</div>
+					<div class="row vacancy-learn-more" style="display: none;">
+						<div class="col-xs-12">
+							<h3><%= vacancy.vacancy_company_name %></h3>
+							<% vacancy.tags.each do |tag| %>
+								<span class="label label-turq"><%= tag.tag_title %></span>
+							<% end %>
+							<p class="text-left">
+								<%= vacancy.vacancy_description %>
+							</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-2 share-vacancy text-center">
-					<span class="label label-default">FACEBOOK</span>
-					<span class="label label-default">ADS</span>
-					<span class="label label-default">SEO</span>
-				</div>
-				<div class="col-lg-2 apply-to-vacancy">
-					<a class="btn btn-default btn-xlg apply-btn" data-toggle="modal" data-target="#apply-form" vacancy-id="<%= vacancy.id %>">APPLY</a>
-				</div>
-				<div class="row space-top-10">
-					<div class="col-xs-12 text-center">
-						<a class="btn btn-default btn-turq learn-more">Learn more</a>
-					</div>
-				</div>
-				<div class="row vacancy-learn-more" style="display: none;">
-					<div class="col-xs-12">
-						<h3><%= vacancy.vacancy_company_name %></h3>
-						<% vacancy.tags.each do |tag| %>
-							<span class="label label-turq"><%= tag.tag_title %></span>
-						<% end %>
-						<p class="text-left">
-							<%= vacancy.vacancy_description %>
-						</p>
-					</div>
-				</div>
-			</div>
+			<% end %>
 		<% end %>
 	</div>
 </section>
-<% if @vacancies.count > 10 %>
+<% if @items.count > 10 %>
 	<section class="separator-two load-more-section">
 		<div class="color-overlay">
 			<div class="container">

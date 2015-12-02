@@ -1,36 +1,85 @@
 <footer>
 	<div class="container">
-		<div class="col-md-3">
-			<img class="img-responsive" src="/images/logo-footer.png">
+		<div class="row">
+			<div class="col-md-3 logo">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
+						<img class="img-responsive" src="/images/logo/b-logo.jpg">
+					</div>
+				</div>
+				<div class="row text-logo">
+					<div class="col-xs-12">
+						<p>Made with <i class="fa fa-heart"></i></p>
+						<p>by <a>Intern Betas</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12 footer-links-holder">
+				<div class="row">
+					<div class="col-md-4 col-xs-12">
+						<h3 class="text-left">Product</h3>
+						<ul>
+							<li><a href="<%= vacancies_browse_path %>">Browse</a></li>
+							<li><a href="<%= why_companies_path %>">Companies</a></li>
+							<li><a href="<%= why_interns_path %>">Interns</a></li>
+							<li><a href="<%= pricing_path %>">Pricing</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<h3 class="text-left">compaines</h3>
+						<ul>
+							<li><a target="_blank" href="https://medium.com/@internbetas">Blog</a></li>
+							<li><a href="<%= team_path %>">Team</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<h3 class="text-left">Contact us</h3>
+						<ul>
+							<li>Contact us</li>
+							<li>Press</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<ul class="social">
+					<li>
+						<a class="btn-twitter" href="https://twitter.com/internbetas" target="_blank"></a>
+					</li>
+					<li>
+						<a class="btn-instagram" href="https://instagram.com/internbetas/" target="_blank"></a>
+					</li>
+					<li>
+						<a class="btn-facebook" href="https://www.facebook.com/InternBetas" target="_blank"></a>
+					</li>
+					<li>
+						<a class="btn-google-plus" href="https://plus.google.com/+Internbetas/about" target="_blank"></a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-6 col-xs-12 footer-links-holder">
-			<ul>
-				<li><a class="footer-link" href="<%= privacy_path %>">Privacy</a></li>
-				<li><a class="footer-link">Security</a></li>
-				<li><a class="footer-link" href="<%= service_path %>">Terms of Service</a></li>
-				<li><a class="footer-link">Policies</a></li>
-				<li><a class="footer-link" href="<%= team_path %>">Team</a></li>
-				<li><a class="footer-link">Contact Us</a></li>
-			</ul>
-		</div>
-		<div class="col-md-3">
-			<ul class="social">
-				<li>
-					<a class="btn btn-default btn-circle" href="https://twitter.com/internbetas" target="_blank">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-				<li>
-					<a class="btn btn-default btn-circle" href="https://www.facebook.com/InternBetas" target="_blank">
-						<i class="fa fa-facebook"></i>
-					</a>
-				</li>
-				<li>
-					<a class="btn btn-default btn-circle" href="https://plus.google.com/+Internbetas/about" target="_blank">
-						<i class="fa fa-google-plus"></i>
-					</a>
-				</li>
-			</ul>
+		<div class="row top-border-2 space-top-30">
+			<div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 space-top-40">
+				<div class="row bottom-links">
+					<div class="col-xs-4 text-right">
+						<a href="<%= privacy_path %>">Privacy Policy</a>
+					</div>
+					<div class="col-xs-4 text-center">
+						<a href="<%= service_path %>">Terms of Service</a>
+					</div>
+					<div class="col-xs-4 text-left">
+						<% if user_signed_in? %>
+							<% if current_user.admin? %>
+								<%= link_to('Dashboard', dashboard_vacancies_path) %>
+							<% end %>
+							<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+						<% else %>
+							<%= link_to('Login', new_user_session_path)  %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </footer>

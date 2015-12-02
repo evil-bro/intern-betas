@@ -25,4 +25,10 @@ class PagesController < ApplicationController
 
 		render :layout => 'page'
 	end
+
+	def pricing
+		@page_title = 'Intern Betas | Pricing'
+
+		render :layout => 'page'
+	end
 end
