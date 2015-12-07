@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'sweet-alert'
 gem 'sweet-alert-confirm'
+gem 'tinymce-rails'
 ###
 gem 'sdoc', '~> 0.4.0', group: :doc
 

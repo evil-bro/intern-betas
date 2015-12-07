@@ -5,4 +5,5 @@
 //= require sweet-alert-confirm
 //= require dist/dashboard/jquery.dataTables.min
 //= require dist/dashboard/jquery.dataTables.bootstrap.min
+//= require tinymce
 //= require dashboard/setup

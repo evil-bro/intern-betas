@@ -16,6 +16,8 @@
 		<div class="hr dotted"></div>
 	<% end %>
 
+	<%= tinymce %>
+
 	<div class="mw1000 center-block">
 		<div class="admin-form theme-primary">
 			<div class="panel heading-border panel-primary">
@@ -41,16 +43,17 @@
 							<div class="col-md-12">
 								<div class="section">
 									<label class="field">
-										<%= f.text_area :vacancy_description, :placeholder => 'Vacancy description *', :class => 'gui-textarea' %>
+										<%= f.text_area :vacancy_description, :placeholder => 'Vacancy description *', :class => 'gui-textarea tinymce' %>
 									</label>
 								</div>
 							</div>
 						</div>
+
 						<div class="row">
 							<div class="col-md-12">
 								<div class="section">
 									<label class="field">
-										<%= f.text_area :vacancy_instructions, :placeholder => 'How to apply to this job *', :class => 'gui-textarea' %>
+										<%= f.text_area :vacancy_instructions, :placeholder => 'How to apply to this job *', :class => 'gui-textarea tinymce' %>
 									</label>
 								</div>
 							</div>
