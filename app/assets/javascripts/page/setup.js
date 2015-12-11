@@ -10,24 +10,24 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.apply-btn').on('click', function() {
-		var vacancyId = $(this).attr('vacancy-id');
+	// $('.apply-btn').on('click', function() {
+	// 	var vacancyId = $(this).attr('vacancy-id');
 
-		$('#vacancy-form').find('input[type=text], textarea').val('');
+	// 	$('#vacancy-form').find('input[type=text], textarea').val('');
 		
-		$.ajax({
-			url: '/vacancies/getvacancy',
-			data: {
-				id: vacancyId
-			},
-			type: 'GET',
-			success: function(data) {
-				$('#vacancyFormLabel').text(data.vacancy_company_name)
-				$('#vacancy_id').val(data.id);
-				$('#apply-form').modal('show');
-			}
-		})
-	});
+	// 	$.ajax({
+	// 		url: '/vacancies/getvacancy',
+	// 		data: {
+	// 			id: vacancyId
+	// 		},
+	// 		type: 'GET',
+	// 		success: function(data) {
+	// 			$('#vacancyFormLabel').text(data.vacancy_company_name)
+	// 			$('#vacancy_id').val(data.id);
+	// 			$('#apply-form').modal('show');
+	// 		}
+	// 	})
+	// });
 
 	$('style').detach();
 
