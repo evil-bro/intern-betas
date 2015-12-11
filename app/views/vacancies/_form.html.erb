@@ -53,15 +53,6 @@
 							<div class="col-md-12">
 								<div class="section">
 									<label class="field">
-										<%= f.text_area :vacancy_instructions, :placeholder => 'How to apply to this job *', :class => 'gui-textarea tinymce' %>
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="section">
-									<label class="field">
 										<%= f.select(:vacancytype_id, options_for_select([['ACCT/Finance', 1], ['Dev', 2], ['Design', 3], ['Engineer', 4], ['Life/Science', 5], ['Marketing', 6]], :selected => @vacancy.vacancytype_id), {:include_blank => 'Select vacancy type'}, {:class => 'form-control', :placeholder => 'Vacancy type'}) %>
 									</label>
 								</div>
@@ -71,7 +62,7 @@
 							<div class="col-md-6">
 								<div class="section">
 									<label class="field">
-										<%= f.text_field :vacancy_url, :placeholder => 'URL to apply (optional)', :class => 'gui-input' %>
+										<%= f.text_field :vacancy_url, :placeholder => 'URL to apply *', :class => 'gui-input' %>
 									</label>
 								</div>
 							</div>
